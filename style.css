@@ -69,6 +69,10 @@ h1 {
 }
 
 .shelf-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
     padding-bottom: 17px;
     border-bottom: 1px solid #d9d5ca;
 }
@@ -80,12 +84,78 @@ h1 {
     font-weight: 400;
 }
 
-.empty-message {
-    margin: 0;
-    padding: 36px 16px 48px;
-    color: #85857d;
+.new-book-button,
+.dialog-actions button,
+.book-actions button {
+    padding: 9px 14px;
+    border: 1px solid #77806d;
+    border-radius: 4px;
+    background: #77806d;
+    color: #fff;
+    font: inherit;
+    cursor: pointer;
+}
+
+.new-book-button:hover,
+.dialog-actions button:hover,
+.book-actions button:hover {
+    background: #626c58;
+}
+
+dialog {
+    width: min(100% - 32px, 420px);
+    padding: 24px;
+    border: 1px solid #d9d5ca;
+    border-radius: 8px;
+    background: #f5f2eb;
+    color: inherit;
+    box-shadow: 0 16px 40px rgba(57, 46, 32, 0.2);
+}
+
+dialog h2 {
+    margin-bottom: 20px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+}
+
+#bookForm {
+    display: grid;
+    gap: 16px;
+}
+
+#bookForm label {
+    display: grid;
+    gap: 6px;
     font-size: 0.9rem;
-    text-align: center;
+}
+
+#bookForm input:not([type="checkbox"]) {
+    width: 100%;
+    padding: 9px 10px;
+    border: 1px solid #c8c4b9;
+    border-radius: 4px;
+    background: #fff;
+    color: inherit;
+    font: inherit;
+}
+
+#bookForm .read-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 4px;
+}
+
+.dialog-actions button:first-child {
+    border-color: #c8c4b9;
+    background: transparent;
+    color: inherit;
 }
 
 .book-shelf {
@@ -94,11 +164,47 @@ h1 {
     grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
     gap: 28px;
     margin: 0;
-    padding: 0 14px 20px;
+    padding: 24px 14px 20px;
     border-bottom: 5px solid #c8bca7;
     border-radius: 0 0 3px 3px;
     box-shadow: 0 8px 10px -10px rgba(57, 46, 32, 0.55);
     list-style: none;
+}
+
+.book-shelf li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px;
+    border: 1px solid #d9d5ca;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.55);
+}
+
+.book-shelf li p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.book-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.book-actions button {
+    padding: 7px 10px;
+    font-size: 0.85rem;
+}
+
+.book-actions button:last-child {
+    border-color: #a36c5a;
+    background: #a36c5a;
+}
+
+.book-actions button:last-child:hover {
+    background: #875643;
 }
 
 @media (max-width: 680px) {

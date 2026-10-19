@@ -18,11 +18,36 @@
         <section class="shelf-section" aria-labelledby="shelf-heading">
             <div class="shelf-heading">
                 <h2 id="shelf-heading">On the shelf</h2>
+                <button id="newBookButton" class="new-book-button" type="button">New Book</button>
             </div>
-            <p class="empty-message">Your shelf is waiting for its first book.</p>
             <ul id="bookShelf" class="book-shelf" aria-label="Books in your library"></ul>
         </section>
     </main>
+    <dialog id="bookDialog" aria-labelledby="book-dialog-heading">
+        <form id="bookForm">
+            <h2 id="book-dialog-heading">Add a book</h2>
+            <label>
+                Title
+                <input name="title" type="text" required>
+            </label>
+            <label>
+                Author
+                <input name="author" type="text" required>
+            </label>
+            <label>
+                Pages
+                <input name="pages" type="number" min="1" step="1" required>
+            </label>
+            <label class="read-option">
+                <input name="read" type="checkbox">
+                I have read this book
+            </label>
+            <div class="dialog-actions">
+                <button id="cancelBookButton" type="button">Cancel</button>
+                <button type="submit">Add Book</button>
+            </div>
+        </form>
+    </dialog>
     <script src="script.js" defer></script>
 </body>
 </html>
