@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5f2eb">
+    <title>My Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="library">
+        <header class="library-header">
+            <p class="eyebrow">A small collection</p>
+            <h1>My Library</h1>
+            <p class="intro">A quiet place for the books you love.</p>
+        </header>
+
+        <section class="shelf-section" aria-labelledby="shelf-heading">
+            <div class="shelf-heading">
+                <h2 id="shelf-heading">On the shelf</h2>
+            </div>
+            <p class="empty-message">Your shelf is waiting for its first book.</p>
+            <ul id="bookShelf" class="book-shelf" aria-label="Books in your library"></ul>
+        </section>
+    </main>
+    <script src="script.js" defer></script>
+</body>
+</html>
